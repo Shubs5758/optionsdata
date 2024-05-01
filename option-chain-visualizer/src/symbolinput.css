@@ -1,0 +1,47 @@
+
+.input-box {
+    width: 300px;
+    height: 50px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    border-color: gray;
+}
+
+.input-box input[type=text] {
+    width: 200px;
+    height: 50px;
+    background-color: #00ff80;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.top-centered-div {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .styled-input {
+    border: 1px solid #ccc; /* Add a 1px solid border with color #ccc */
+    padding: 8px; /* Add some padding to the input field */
+    width: 200px; /* Set the width of the input field */
+    width: 300px;
+    height: 50px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    border-color: gray;
+  }
+
+  .centered-button {
+    /* Optional styles for the button */
+    padding: 10px 20px;
+    background-color:green;
+    color: white;
+    border: red;
+    border-radius: 5px;
+    cursor: pointer;
+  }
