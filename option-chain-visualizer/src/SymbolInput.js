@@ -18,39 +18,19 @@ const SymbolInput = ({ onSubmit }) => {
     }
   };
 
+  // const handleSubmit = (event) => {
+  //   event.preventDefault();
+  //   onSubmit(symbol, strikePrice, expiryDate);
+  // };
   const handleSubmit = (event) => {
     event.preventDefault();
-    onSubmit(symbol, strikePrice, expiryDate);
+    const formattedSymbol = "[" + symbol.split(",").map((s) => `"${s.trim()}"`).join(",") + "]";
+    const formattedStrikePrice = "[" + strikePrice.split(",").map((s) => `"${s.trim()}"`).join(",") + "]";
+    const formattedExpiryDate = "[" + expiryDate.split(",").map((s) => `"${s.trim()}"`).join(",") + "]";
+    onSubmit(formattedSymbol, formattedStrikePrice, formattedExpiryDate);
   };
-
-  // return (
-  //   <form  onSubmit={handleSubmit}>
-  //     <input
-  //       type="text"
-  //       name="symbol"
-  //       value={symbol}
-  //       onChange={handleChange}
-  //       placeholder="Enter symbol..."
-  //     />
-  //     <input
-  //       type="text"
-  //       name="strikePrice"
-  //       value={strikePrice}
-  //       onChange={handleChange}
-  //       placeholder="Enter strike price..."
-  //     />
-  //     <input
-  //       type="text"
-  //       name="expiryDate"
-  //       value={expiryDate}
-  //       onChange={handleChange}
-  //       placeholder="Enter expiry date..."
-  //     />
-  //     <button type="submit" >
-  //       Submit
-  //     </button>
-  //   </form>
-  // );
+  
+  
   //create input field for symbol and strike price and expiry date also provide css
 
   return (

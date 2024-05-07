@@ -39,9 +39,8 @@ const App = () => {
             expiryDate={expiryDate}
           />
         )}
+      </div>
     </div>
-    </div>
-
   );
 };
 
